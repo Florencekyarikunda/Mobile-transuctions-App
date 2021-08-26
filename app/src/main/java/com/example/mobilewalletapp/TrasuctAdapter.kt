@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.*
 
-class TrasuctAdapter(var TrasuctionList:List<Trasactions>, var context: Context): Adapter<TransuctionViewHolder>{
+class TrasuctAdapter(var TrasuctionList:List<Trasactions>): Adapter<TransuctionViewHolder>{
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransuctionViewHolder {
         var itemView=
             LayoutInflater.from(parent.context).inflate(R.layout.trasuctions_list_items,parent,false)
