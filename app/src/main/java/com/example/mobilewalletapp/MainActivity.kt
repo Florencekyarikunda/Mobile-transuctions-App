@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     lateinit var tvDescription:TextView
@@ -12,16 +13,17 @@ class MainActivity : AppCompatActivity() {
     lateinit var tvReference:TextView
     lateinit var btnClick:Button
     lateinit var tvAmount:TextView
-    lateinit var tvTransuctionType:TextView
+    lateinit var tvTransactionType:TextView
+    lateinit var rvTransucts:RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var tvDescription=findViewById<TextView>(R.id.tvDescription)
-        var tvDate=findViewById<TextView>(R.id.tvDate)
-        var tvAmount=findViewById<TextView>(R.id.tvAmount)
-        var tvReference=findViewById<TextView>(R.id.tvReference)
-        var tvTransuctionType=findViewById<TextView>(R.id.tvTransactionType)
-        var btnClick=findViewById<Button>(R.id.btnClick)
+         tvDescription=findViewById<TextView>(R.id.tvDescription)
+         tvDate=findViewById<TextView>(R.id.tvDate)
+         tvAmount=findViewById<TextView>(R.id.tvAmount)
+         tvReference=findViewById<TextView>(R.id.tvReference)
+         tvTransactionType=findViewById<TextView>(R.id.tvTransactionType)
+         btnClick=findViewById<Button>(R.id.btnClick)
 
         btnClick.setOnClickListener {
             var intent=Intent(baseContext, MainActivity::class.java)
